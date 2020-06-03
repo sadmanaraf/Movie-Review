@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MovieDetails">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="50dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/movieName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10sp"
+                android:text="Movie Name"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.518"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.14" />
+
+            <TextView
+                android:id="@+id/releaseDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Release Date: "
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.097"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/movieName"
+                app:layout_constraintVertical_bias="0.116" />
+
+            <TextView
+                android:id="@+id/movieSummary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10sp"
+                android:text="Summary: "
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/releaseDate"
+                app:layout_constraintVertical_bias="0.039" />
+
+            <TextView
+                android:id="@+id/movieRating"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10sp"
+                android:text="Rating: "
+                android:textSize="15sp"
+                app:layout_constraintTop_toBottomOf="@+id/movieSummary"/>
+
+            <TextView
+                android:id="@+id/reviews"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="17sp"
+                android:text="Reviews:"
+                android:textSize="20sp"
+                app:layout_constraintTop_toBottomOf="@+id/movieRating"/>
+
+            <TextView
+                android:id="@+id/userReviews"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15sp"
+                android:hint="Reviews"
+                android:textSize="10sp"
+                app:layout_constraintTop_toBottomOf="@+id/reviews"/>
+
+            <EditText
+                android:id="@+id/etScore"
+                android:layout_width="270sp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:hint="Add a score between 1-10"
+                android:inputType="number"
+                android:padding="10sp"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/userReviews" />
+
+            <EditText
+                android:id="@+id/etReview"
+                android:layout_width="270sp"
+                android:layout_height="wrap_content"
+                android:hint="Add a review"
+                android:padding="13sp"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etScore"/>
+
+            <Button
+                android:id="@+id/scoreBT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add score"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/etScore"
+                app:layout_constraintTop_toBottomOf="@+id/userReviews" />
+
+            <Button
+                android:id="@+id/reviewBT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add review"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/etReview"
+                app:layout_constraintTop_toBottomOf="@+id/etScore" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
